@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 const ejsMate = require("ejs-mate");
 
-const MONGO_URL = ("mongodb://127.0.0.1:27017/test");
+const MONGO_URL = ("mongodb://127.0.0.1:27017/ecommerece");
 
 main()
 .then(()=>{
@@ -27,6 +27,10 @@ app.use(express.static(path.join(__dirname,"/public")));
 
 app.get("/",(req,res)=>{
     res.send("hi,i am root")
+});
+
+app.get("/demo",(req,res)=>{
+    res.render("./demo/demo.ejs")
 });
 
 app.listen(8080,()=>{
