@@ -32,6 +32,10 @@ app.get("/",(req,res)=>{
 app.get("/demo",(req,res)=>{
     res.render("./demo/demo.ejs")
 });
+app.get("/listings",(req,res)=>{
+   res.render("./listings/index.ejs");
+    res.redirect(`/demo`)
+});
 
 app.listen(8080,()=>{
     console.log("server is listing to port 8080");
