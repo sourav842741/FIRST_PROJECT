@@ -29,12 +29,10 @@ app.get("/",(req,res)=>{
     res.send("hi,i am root")
 });
 
-app.get("/demo",(req,res)=>{
-    res.render("./demo/demo.ejs")
-});
-app.get("/listings",(req,res)=>{
+
+app.get("/ecommerce/home",(req,res)=>{
    res.render("./listings/index.ejs");
-    res.redirect(`/demo`)
+   
 });
 
  
