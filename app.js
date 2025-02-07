@@ -35,6 +35,14 @@ app.get("/ecommerce/home",(req,res)=>{
    
 });
 
+app.get("/ecommerce/mobileSection",(req,res)=>{
+    res.render("./listings/mobileSection.ejs");
+});
+
+app.get("/ecommerce/electronicSection",(req,res)=>{
+    res.render("./listings/electronicSection.ejs");
+});
+
  
 
 app.listen(8080,()=>{
